@@ -1,0 +1,33 @@
+spring:
+  data:
+      mongodb:
+        uri: mongodb://localhost:27017/taskdb
+  jackson:
+      serialization:
+        write-dates-as-timestamps: false
+
+# Actuator endpoints for monitoring
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+      base-path: /actuator
+  endpoint:
+    health:
+      show-details: when-authorized
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "change-this-to-a-long-random-secret-key"
+    expiration-minutes: 60
+
+# Application information
+info:
+  app:
+    name: Task Management API
+    description: A comprehensive REST API for managing tasks with user authentication
+    version: 1.0.0
