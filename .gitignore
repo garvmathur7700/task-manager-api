@@ -31,3 +31,19 @@ build/
 
 ### VS Code ###
 .vscode/
+# Default ignored files
+/shelf/
+/workspace.xml
+target/
+.idea/
+*.iml
+*.log
+*.class
+*.jar
+*.war
+*.db
+mongo_data/
+out/
+# Maven wrapper
+!.mvn/wrapper/
+.mvn/*
